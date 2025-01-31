@@ -24,11 +24,7 @@ public class GraphDao {
     }
 
     public GraphLabelNotDirect getGraph() throws Exception {
-        Gson gson = new Gson();
-        this.graph = gson.fromJson(this.readGraph(), GraphLabelNotDirect.class);
-        if (this.graph == null) {
-            this.graph = new GraphLabelNotDirect();
-        }
+        createGraph();
         return graph;
     }
 
@@ -45,20 +41,34 @@ public class GraphDao {
         }
     }
 
-    private void addRoads() throws Exception {
+    private void addConexion() throws Exception {
         ConexionServices cxs = new ConexionServices();
         ComputadoraServices cs = new ComputadoraServices();
+    
         for (Object obj : cxs.getListAll().toArray()) {
-            Computadora origen = cs.get(((Conexion) obj).getIdOrigen());
-            Computadora destino = cs.get(((Conexion) obj).getIdDestino());
-            Double peso = ((Conexion) obj).getDistancia();
+            Conexion conexion = (Conexion) obj;
+            
+            // Obtener origen y destino
+            Computadora origen = cs.get(conexion.getIdOrigen());
+            Computadora destino = cs.get(conexion.getIdDestino());
+            
+            // Verificar si son nulos antes de agregarlos al grafo
+            if (origen == null || destino == null) {
+                System.err.println("Error: No se encontró la computadora con ID: " + 
+                    (origen == null ? conexion.getIdOrigen() : "") + " o " + 
+                    (destino == null ? conexion.getIdDestino() : ""));
+                continue; // Saltar esta conexión si los datos son inválidos
+            }
+    
+            Double peso = conexion.getDistancia();
             this.graph.addEdge(origen.getId(), destino.getId(), peso.floatValue());
         }
     }
+    
 
     public void createGraph() throws Exception {
         this.addComputadora();
-        this.addRoads();
+        this.addConexion();
         this.saveGraph();
     }
 
@@ -74,8 +84,8 @@ public class GraphDao {
             HashMap<String, Object> node = new HashMap<String, Object>();
             node.put("id", computadores[i].getId());
             node.put("nombre", computadores[i].getNombre());
-            node.put("lat", computadores[i].getUbicacionY());
-            node.put("long", computadores[i].getUbicacionX());
+            node.put("posx", computadores[i].getUbicacionY());
+            node.put("posy", computadores[i].getUbicacionX());
             nodes[i] = node;
         }
         grafo.put("nodes", nodes);
@@ -86,7 +96,7 @@ public class GraphDao {
             HashMap<String, Number> edge = new HashMap<String, Number>();
             edge.put("from", conexiones[i].getIdOrigen());
             edge.put("to", conexiones[i].getIdDestino());
-            edge.put("weight", conexiones[i].getDistancia());
+            edge.put("weigth", conexiones[i].getDistancia());
             edges[i] = edge;
         }
         grafo.put("edges", edges);

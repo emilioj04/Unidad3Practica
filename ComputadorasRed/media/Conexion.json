@@ -1,1 +1,182 @@
-[{"id":1,"idOrigen":1,"idDestino":2,"distancia":10.0},{"id":2,"idOrigen":2,"idDestino":3,"distancia":10.0},{"id":3,"idOrigen":3,"idDestino":1,"distancia":10.0}]
+[
+    {
+        "id": 1,
+        "idOrigen": 1,
+        "idDestino": 2,
+        "distancia": 10.0
+    },
+    {
+        "id": 2,
+        "idOrigen": 1,
+        "idDestino": 3,
+        "distancia": 20.0
+    },
+    {
+        "id": 3,
+        "idOrigen": 2,
+        "idDestino": 3,
+        "distancia": 5.0
+    },
+    {
+        "id": 4,
+        "idOrigen": 1,
+        "idDestino": 4,
+        "distancia": 15.0
+    },
+    {
+        "id": 5,
+        "idOrigen": 2,
+        "idDestino": 5,
+        "distancia": 25.0
+    },
+    {
+        "id": 6,
+        "idOrigen": 3,
+        "idDestino": 6,
+        "distancia": 30.0
+    },
+    {
+        "id": 7,
+        "idOrigen": 4,
+        "idDestino": 7,
+        "distancia": 12.0
+    },
+    {
+        "id": 8,
+        "idOrigen": 5,
+        "idDestino": 8,
+        "distancia": 18.0
+    },
+    {
+        "id": 9,
+        "idOrigen": 6,
+        "idDestino": 9,
+        "distancia": 22.0
+    },
+    {
+        "id": 10,
+        "idOrigen": 7,
+        "idDestino": 10,
+        "distancia": 10.0
+    },
+    {
+        "id": 11,
+        "idOrigen": 8,
+        "idDestino": 11,
+        "distancia": 17.0
+    },
+    {
+        "id": 12,
+        "idOrigen": 9,
+        "idDestino": 12,
+        "distancia": 23.0
+    },
+    {
+        "id": 13,
+        "idOrigen": 10,
+        "idDestino": 13,
+        "distancia": 8.0
+    },
+    {
+        "id": 14,
+        "idOrigen": 11,
+        "idDestino": 14,
+        "distancia": 14.0
+    },
+    {
+        "id": 15,
+        "idOrigen": 12,
+        "idDestino": 15,
+        "distancia": 10.0
+    },
+    {
+        "id": 16,
+        "idOrigen": 13,
+        "idDestino": 16,
+        "distancia": 20.0
+    },
+    {
+        "id": 17,
+        "idOrigen": 14,
+        "idDestino": 17,
+        "distancia": 12.0
+    },
+    {
+        "id": 18,
+        "idOrigen": 15,
+        "idDestino": 18,
+        "distancia": 11.0
+    },
+    {
+        "id": 19,
+        "idOrigen": 16,
+        "idDestino": 19,
+        "distancia": 16.0
+    },
+    {
+        "id": 20,
+        "idOrigen": 17,
+        "idDestino": 20,
+        "distancia": 9.0
+    },
+    {
+        "id": 21,
+        "idOrigen": 18,
+        "idDestino": 21,
+        "distancia": 27.0
+    },
+    {
+        "id": 22,
+        "idOrigen": 19,
+        "idDestino": 22,
+        "distancia": 21.0
+    },
+    {
+        "id": 23,
+        "idOrigen": 20,
+        "idDestino": 23,
+        "distancia": 19.0
+    },
+    {
+        "id": 24,
+        "idOrigen": 21,
+        "idDestino": 24,
+        "distancia": 13.0
+    },
+    {
+        "id": 25,
+        "idOrigen": 22,
+        "idDestino": 25,
+        "distancia": 24.0
+    },
+    {
+        "id": 26,
+        "idOrigen": 23,
+        "idDestino": 26,
+        "distancia": 28.0
+    },
+    {
+        "id": 27,
+        "idOrigen": 24,
+        "idDestino": 27,
+        "distancia": 15.0
+    },
+    {
+        "id": 28,
+        "idOrigen": 25,
+        "idDestino": 28,
+        "distancia": 22.0
+    },
+    {
+        "id": 29,
+        "idOrigen": 26,
+        "idDestino": 29,
+        "distancia": 25.0
+    },
+    {
+        "id": 30,
+        "idOrigen": 27,
+        "idDestino": 30,
+        "distancia": 9.0
+    }
+]

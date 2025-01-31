@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camino Mínimo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+</head>
+<body>
+    <h1>Mapa de Computadoras</h1>
+    
+    <!-- Formulario para seleccionar origen, destino y algoritmo -->
+    <form method="POST">
+        <label for="origen">Origen:</label>
+        <input type="number" name="origen" required>
+        <label for="destino">Destino:</label>
+        <input type="number" name="destino" required>
+        <label for="algoritmo">Algoritmo:</label>
+        <select name="algoritmo" required>
+            <option value="bellman">Bellman</option>
+            <option value="floyd">Floyd</option>
+        </select>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Mostrar peso mínimo -->
+
+    <p><strong>Peso Total:</strong> {{ peso_total }}</p>
+   
+
+    <!-- Contenedor para el gráfico -->
+    <div id="network" style="width: 800px; height: 600px;"></div>
+
+    <script type="text/javascript">
+        // Crear el gráfico
+        var nodes = new vis.DataSet({{ nodes | tojson }});
+        var edges = new vis.DataSet({{ edges | tojson }});
+        var container = document.getElementById('network');
+
+        var data = {
+            nodes: nodes,
+            edges: edges
+        };
+
+        var options = {
+            nodes: {
+                shape: 'dot',
+                size: 20,
+                font: {
+                    size: 14,
+                    face: 'arial',
+                    color: 'black'
+                }
+            },
+            edges: {
+                width: 2,
+                arrows: 'to'
+            }
+        };
+
+        var network = new vis.Network(container, data, options);
+
+        // Resaltar los nodos del camino más corto
+        {% if camino %}
+            var camino = {{ camino | tojson }};
+            for (var i = 0; i < camino.length; i++) {
+                var nodeId = camino[i];
+                nodes.update({id: nodeId, color: {background: 'red'}});
+            }
+        {% endif %}
+    </script>
+</body>
+</html>

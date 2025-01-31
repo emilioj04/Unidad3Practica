@@ -32,9 +32,9 @@ public class GraphServices {
     public Integer[] getMinCam (String algoritmo, Integer origen, Integer destino) throws Exception {
         switch (algoritmo) {
             case "floyd" :
-            //return this.obj.getMinCamFloyd(origen, destino);
+            return this.getGraph().minPathFloyd(origen, destino);
             case "bellman" :
-            //return this.obj.getMinCamBellman(origen, destino);
+            return this.getGraph().minPathBellmanFord(origen, destino);
             default:
                 return null;
         }
@@ -43,9 +43,9 @@ public class GraphServices {
     public Float getMinPeso (String algoritmo, Integer origen, Integer destino) throws Exception {
         switch (algoritmo) {
             case "floyd" :
-            //return this.obj.getMinPesoFloyd(origen, destino);
+            return this.getGraph().minWeightFloyd(origen, destino);
             case "bellman" :
-            //return this.obj.getMinPesoBellman(origen, destino);
+            return this.getGraph().minWeightBellmanFord(origen, destino);
             default:
                 return null;
         }

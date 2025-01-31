@@ -2,15 +2,9 @@ package com.ComputadorasRed.controller.tda.graph;
 
 import java.lang.reflect.Array;
 import java.util.HashMap;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-
 
 import com.ComputadorasRed.controller.excepcion.LabelException;
 import com.ComputadorasRed.controller.tda.list.LinkedList;
-import com.ComputadorasRed.models.Computadora;
 
 public class GraphLabelDirect<E> extends GraphDirect {
     protected E labels [];
@@ -76,7 +70,7 @@ public class GraphLabelDirect<E> extends GraphDirect {
         return band;
     }
 
-    public Integer getVertexLabel (E label) {
+    public Integer getVertexLabel (E label) throws Exception {
         return dicVertext.get(label);
     }
 
@@ -92,62 +86,27 @@ public class GraphLabelDirect<E> extends GraphDirect {
         }
     }
 
-    public String toJson() {
-        String grafo = "{";
-        try {
-            grafo += "\"nodes\": [";
-            for (int i = 1; i < this.nroVertex()+1; i++) {
-                Computadora ciudad = (Computadora) getLabel(i);
-                grafo += String.format("{\"id\": %d, \"nombre\": \"%s\",", ciudad.getId(), ciudad.getNombre());
-                grafo += "\"lat\":" + "\"" + ciudad.getUbicacionY() + "\"" + ",";
-                grafo += "\"long\":" + "\"" + ciudad.getUbicacionX() + "\"" + "}";
-                if (i < this.nroVertex()) {
-                    grafo += ",";   
-                }
+    @Override
+    public String toString() {
+        String graph = "";
+        if (islabelsGraph()) {
+            graph += "Vertices: \n";
+            for (int i = 1; i < labels.length; i++) {
+                graph += i + " -> " + labels[i] + "\n";
             }
-            grafo += "],";
-            grafo += "\"edges\":[";
-            for (int i = 1; i < this.nroVertex()+1; i++) {
+            graph += "Aristas:\n";
+            for (int i = 1; i < nroVertex() + 1; i++) {
                 LinkedList<Adyacencia> listAdj = adjacents(i);
                 if (!listAdj.isEmpty()) {
                     Adyacencia[] ady = listAdj.toArray();
                     for (int j = 0; j < ady.length; j++) {
-                        grafo += String.format("{\"from\": %d, \"to\": %d, \"weight\": \"%f\"}", i, ady[j].getDestino(), ady[j].getWeight());
-                        if (i < this.nroVertex() || j < ady.length-1) {
-                            grafo += ",";
-                        }
+                        graph += i + " -> " + ady[j].getDestino() + " con peso " + ady[j].getWeight() + "\n";
                     }
                 }
             }
-            grafo += "]";
-        } catch (Exception e) {
-            //TODO: handle exception
+        } else {
+            graph = "No se han asignado etiquetas a los vertices";
         }
-        grafo += "}";
-        return grafo;
-    }
-
-    public void saveGraph () throws Exception {
-        try {
-            FileWriter file = new FileWriter("media/Graph" + ".json");
-            file.write(this.toJson());
-            file.flush();
-            file.close();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
-    }
-
-    public String readGraph() throws Exception {
-        File file = new File("media/Graph" + ".json");
-        StringBuilder sb = new StringBuilder();
-        try (Scanner in = new Scanner(file)) {
-            while (in.hasNextLine()) {
-                sb.append(in.nextLine());
-            }
-        } catch (FileNotFoundException e) {
-            // TODO: handle exception
-        }
-        return sb.toString();
+        return graph;
     }
 }

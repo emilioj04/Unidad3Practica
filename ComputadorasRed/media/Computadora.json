@@ -1,1 +1,242 @@
-[{"id":1,"nombre":"Computadora1","marca":"HP","ip":"121.102.102","ubicacionX":120.12,"ubicacionY":10.12}]
+[
+    {
+        "id": 1,
+        "nombre": "Computadora1",
+        "marca": "HP",
+        "ip": "121.102.102",
+        "ubicacionX": 120.12,
+        "ubicacionY": 10.12
+    },
+    {
+        "id": 2,
+        "nombre": "Computadora2",
+        "marca": "HP",
+        "ip": "121.102.102",
+        "ubicacionX": 120.13,
+        "ubicacionY": 10.13
+    },
+    {
+        "id": 3,
+        "nombre": "Computadora3",
+        "marca": "HP",
+        "ip": "121.102.103",
+        "ubicacionX": 120.14,
+        "ubicacionY": 10.14
+    },
+    {
+        "id": 4,
+        "nombre": "Computadora4",
+        "marca": "Dell",
+        "ip": "121.102.104",
+        "ubicacionX": 120.15,
+        "ubicacionY": 10.15
+    },
+    {
+        "id": 5,
+        "nombre": "Computadora5",
+        "marca": "Lenovo",
+        "ip": "121.102.105",
+        "ubicacionX": 120.16,
+        "ubicacionY": 10.16
+    },
+    {
+        "id": 6,
+        "nombre": "Computadora6",
+        "marca": "HP",
+        "ip": "121.102.106",
+        "ubicacionX": 120.17,
+        "ubicacionY": 10.17
+    },
+    {
+        "id": 7,
+        "nombre": "Computadora7",
+        "marca": "Acer",
+        "ip": "121.102.107",
+        "ubicacionX": 120.18,
+        "ubicacionY": 10.18
+    },
+    {
+        "id": 8,
+        "nombre": "Computadora8",
+        "marca": "HP",
+        "ip": "121.102.108",
+        "ubicacionX": 120.19,
+        "ubicacionY": 10.19
+    },
+    {
+        "id": 9,
+        "nombre": "Computadora9",
+        "marca": "Asus",
+        "ip": "121.102.109",
+        "ubicacionX": 120.20,
+        "ubicacionY": 10.20
+    },
+    {
+        "id": 10,
+        "nombre": "Computadora10",
+        "marca": "HP",
+        "ip": "121.102.110",
+        "ubicacionX": 120.21,
+        "ubicacionY": 10.21
+    },
+    {
+        "id": 11,
+        "nombre": "Computadora11",
+        "marca": "HP",
+        "ip": "121.102.111",
+        "ubicacionX": 120.22,
+        "ubicacionY": 10.22
+    },
+    {
+        "id": 12,
+        "nombre": "Computadora12",
+        "marca": "Lenovo",
+        "ip": "121.102.112",
+        "ubicacionX": 120.23,
+        "ubicacionY": 10.23
+    },
+    {
+        "id": 13,
+        "nombre": "Computadora13",
+        "marca": "HP",
+        "ip": "121.102.113",
+        "ubicacionX": 120.24,
+        "ubicacionY": 10.24
+    },
+    {
+        "id": 14,
+        "nombre": "Computadora14",
+        "marca": "Dell",
+        "ip": "121.102.114",
+        "ubicacionX": 120.25,
+        "ubicacionY": 10.25
+    },
+    {
+        "id": 15,
+        "nombre": "Computadora15",
+        "marca": "Lenovo",
+        "ip": "121.102.115",
+        "ubicacionX": 120.26,
+        "ubicacionY": 10.26
+    },
+    {
+        "id": 16,
+        "nombre": "Computadora16",
+        "marca": "Acer",
+        "ip": "121.102.116",
+        "ubicacionX": 120.27,
+        "ubicacionY": 10.27
+    },
+    {
+        "id": 17,
+        "nombre": "Computadora17",
+        "marca": "HP",
+        "ip": "121.102.117",
+        "ubicacionX": 120.28,
+        "ubicacionY": 10.28
+    },
+    {
+        "id": 18,
+        "nombre": "Computadora18",
+        "marca": "Acer",
+        "ip": "121.102.118",
+        "ubicacionX": 120.29,
+        "ubicacionY": 10.29
+    },
+    {
+        "id": 19,
+        "nombre": "Computadora19",
+        "marca": "HP",
+        "ip": "121.102.119",
+        "ubicacionX": 120.30,
+        "ubicacionY": 10.30
+    },
+    {
+        "id": 20,
+        "nombre": "Computadora20",
+        "marca": "Lenovo",
+        "ip": "121.102.120",
+        "ubicacionX": 120.31,
+        "ubicacionY": 10.31
+    },
+    {
+        "id": 21,
+        "nombre": "Computadora21",
+        "marca": "Acer",
+        "ip": "121.102.121",
+        "ubicacionX": 120.32,
+        "ubicacionY": 10.32
+    },
+    {
+        "id": 22,
+        "nombre": "Computadora22",
+        "marca": "Asus",
+        "ip": "121.102.122",
+        "ubicacionX": 120.33,
+        "ubicacionY": 10.33
+    },
+    {
+        "id": 23,
+        "nombre": "Computadora23",
+        "marca": "HP",
+        "ip": "121.102.123",
+        "ubicacionX": 120.34,
+        "ubicacionY": 10.34
+    },
+    {
+        "id": 24,
+        "nombre": "Computadora24",
+        "marca": "Lenovo",
+        "ip": "121.102.124",
+        "ubicacionX": 120.35,
+        "ubicacionY": 10.35
+    },
+    {
+        "id": 25,
+        "nombre": "Computadora25",
+        "marca": "HP",
+        "ip": "121.102.125",
+        "ubicacionX": 120.36,
+        "ubicacionY": 10.36
+    },
+    {
+        "id": 26,
+        "nombre": "Computadora26",
+        "marca": "Dell",
+        "ip": "121.102.126",
+        "ubicacionX": 120.37,
+        "ubicacionY": 10.37
+    },
+    {
+        "id": 27,
+        "nombre": "Computadora27",
+        "marca": "Lenovo",
+        "ip": "121.102.127",
+        "ubicacionX": 120.38,
+        "ubicacionY": 10.38
+    },
+    {
+        "id": 28,
+        "nombre": "Computadora28",
+        "marca": "Asus",
+        "ip": "121.102.128",
+        "ubicacionX": 120.39,
+        "ubicacionY": 10.39
+    },
+    {
+        "id": 29,
+        "nombre": "Computadora29",
+        "marca": "HP",
+        "ip": "121.102.129",
+        "ubicacionX": 120.40,
+        "ubicacionY": 10.40
+    },
+    {
+        "id": 30,
+        "nombre": "Computadora30",
+        "marca": "HP",
+        "ip": "121.102.130",
+        "ubicacionX": 120.41,
+        "ubicacionY": 10.41
+    }
+]

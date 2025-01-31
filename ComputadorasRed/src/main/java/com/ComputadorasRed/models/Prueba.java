@@ -1,7 +1,6 @@
 package com.ComputadorasRed.models;
 
 import com.ComputadorasRed.controller.dao.services.ComputadoraServices;
-import com.ComputadorasRed.controller.tda.graph.GraphLabelNotDirect;
 
 public class Prueba {
     public static void main(String[] args) throws Exception {
@@ -18,7 +17,7 @@ public class Prueba {
         
 
         //.out.println(Computadora1);
-
+/*
         GraphLabelNotDirect<Computadora> graph = new GraphLabelNotDirect<Computadora>(3, Computadora.class);
         graph.labelVertex(1, computadora1);
         graph.labelVertex(2, computadora2);
@@ -47,7 +46,7 @@ public class Prueba {
 
         //GraphDirect graph2 = new GraphDirect(2);
         //graph2.addEdge(1, 2);
-        //System.out.println(graph2);
+        //System.out.println(graph2); */
     }
 
 }
