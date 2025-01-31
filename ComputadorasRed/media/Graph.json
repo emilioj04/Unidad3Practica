@@ -1,0 +1,54 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "nombre": "Computadora1",
+            "lat": "10.12",
+            "long": "120.12"
+        },
+        {
+            "id": 2,
+            "nombre": "Computadora2",
+            "lat": "100.0",
+            "long": "115.12"
+        },
+        {
+            "id": 3,
+            "nombre": "Computadora3",
+            "lat": "90.0",
+            "long": "15.12"
+        }
+    ],
+    "edges": [
+        {
+            "from": 1,
+            "to": 2,
+            "weight": "0,000000"
+        },
+        {
+            "from": 1,
+            "to": 3,
+            "weight": "0,000000"
+        },
+        {
+            "from": 2,
+            "to": 1,
+            "weight": "0,000000"
+        },
+        {
+            "from": 2,
+            "to": 3,
+            "weight": "0,000000"
+        },
+        {
+            "from": 3,
+            "to": 1,
+            "weight": "0,000000"
+        },
+        {
+            "from": 3,
+            "to": 2,
+            "weight": "0,000000"
+        }
+    ]
+}
